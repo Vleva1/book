@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Book, Friendship, ReadingList
+
+admin.register(Book)
+admin.register(Friendship)
+admin.register(ReadingList)
