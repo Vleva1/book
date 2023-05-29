@@ -1,0 +1,12 @@
+{% extends 'default.html' %}
+
+{% block content %}
+  <h1>{{ friend.username }}'s Reading List</h1>
+  <ul>
+    {% for item in reading_list %}
+      <li>{{ item.book.title }} by {{ item.book.author }}{% if item.is_read %} (read){% endif %}{% if item.is_to_read %} (to read){% endif %}</li>
+    {% empty %}
+      <li>No books in {{ friend.username }}'s reading list.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

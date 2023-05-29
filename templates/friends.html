@@ -1,0 +1,12 @@
+{% extends 'default.html' %}
+
+{% block content %}
+  <h1>Friends</h1>
+  <ul>
+    {% for friend in friends %}
+      <li>{{ friend.friend.username }}</li>
+    {% empty %}
+      <li>No friends found.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

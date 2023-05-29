@@ -1,0 +1,11 @@
+{% extends 'default.html' %}
+
+{% block content %}
+  <h1>Add Book</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ book_form.as_p }}
+    {{ reading_list_form.as_p }}
+    <button type="submit">Add to Reading List</button>
+  </form>
+{% endblock %}
